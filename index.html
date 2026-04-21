@@ -593,7 +593,7 @@
   </svg>
 
   <div class="hero-content">
-    <div class="hero-date">OCT 2026 &bull; OKC, OKLAHOMA</div>
+    <div class="hero-date">OCT 21, 2026 &bull; OKC, OKLAHOMA</div>
     <h1 class="hero-title">THUNDER<span class="tp-accent">PLAINS</span></h1>
     <div class="hero-year">2 0 2 6</div>
     <div class="hero-tagline">{developer conference}</div>
@@ -615,7 +615,7 @@
 <!-- STATS BAR -->
 <div class="stats-bar" role="list" aria-label="Conference highlights">
   <div class="stat" role="listitem"><div class="stat-value c-white">13</div><div class="stat-label">Years Running</div></div>
-  <div class="stat" role="listitem"><div class="stat-value c-magenta">1</div><div class="stat-label">Day, All Killer</div></div>
+  <div class="stat" role="listitem"><div class="stat-value c-magenta">1</div><div class="stat-label">Day</div></div>
   <div class="stat" role="listitem"><div class="stat-value c-cyan">2</div><div class="stat-label">Tracks</div></div>
   <div class="stat" role="listitem"><div class="stat-value c-yellow">OKC</div><div class="stat-label">Oklahoma City</div></div>
 </div>
@@ -692,7 +692,7 @@
   <div class="details-grid">
     <div class="detail-card"><span class="detail-icon" aria-hidden="true">📅</span><h3>Date</h3><p><strong>October 2026</strong> — Exact date TBA</p></div>
     <div class="detail-card"><span class="detail-icon" aria-hidden="true">📍</span><h3>Venue</h3><p><strong>OKC Convention Center</strong><br>Downtown Oklahoma City</p></div>
-    <div class="detail-card"><span class="detail-icon" aria-hidden="true">⏱</span><h3>Format</h3><p><strong>Full day, dual track.</strong><br>8am – 5pm. Lunch included.</p></div>
+    <div class="detail-card"><span class="detail-icon" aria-hidden="true">⏱</span><h3>Format</h3><p><strong>Full day, dual track.</strong><br>8am – 5pm. Coffee &amp; Lunch included.</p></div>
     <div class="detail-card"><span class="detail-icon" aria-hidden="true">🎟</span><h3>InnoTech Access</h3><p>Your ticket includes <strong>full access</strong> to the InnoTech exhibit hall and sessions.</p></div>
   </div>
 </section>
@@ -778,7 +778,7 @@
   </div>
   <div class="sponsor-cta">
     <p>Help us host incredible talent from OKC and beyond! Sponsorship options include logos and links on the website, slides, emails, and other promotional material.</p>
-    <a href="/cdn-cgi/l/email-protection#215549544f454453514d40484f5261554442494d40494e4c400f4e5346">Become a Sponsor →</a>
+    <a href="#" data-email-b64="dGh1bmRlcnBsYWluc0B0ZWNobGFob21hLm9yZw==" data-mail-query="subject=ThunderPlains%20Sponsorship">Become a Sponsor →</a>
   </div>
 </section>
 
@@ -791,7 +791,7 @@
     <div class="faq-item"><h3 class="faq-q">Where should I park?</h3><p class="faq-a">Get Directions: <a href="https://okcconventioncenter.com/attend/directions-parking/">Convention Center Parking</a> — 15 SW 4th St., Entrance on Cornett Drive. Monthly, hourly, daily, valet available. 1,105 Total Spaces, 24 ADA Accessible.</p></div>
     <div class="faq-item"><h3 class="faq-q">Is lunch included?</h3><p class="faq-a">What kind of conference would we be with no food?! Every conference ticket comes with a full lunch. If you have dietary restrictions, please list them on your registration form so we can accommodate you.</p></div>
     <div class="faq-item"><h3 class="faq-q">What is InnoTech?</h3><p class="faq-a">ThunderPlains has partnered with InnoTech again this year, and both conferences will happen on the same day, but in different rooms. You will need a ThunderPlains ticket to access the ThunderPlains conference and lunch, but a ThunderPlains ticket will also give you full access to the InnoTech exhibit hall and other InnoTech sessions and events. <a href="https://www.innotechok.com/">Learn more about InnoTech</a>.</p></div>
-    <div class="faq-item"><h3 class="faq-q">How do I become a sponsor?</h3><p class="faq-a">For sponsorship questions, sales, and to request a custom sponsorship package: Email us at <a href="/cdn-cgi/l/email-protection#d2a6baa7bcb6b7a0a2beb3bbbca192a6b7b1babeb3babdbfb3fcbda0b5"><span class="__cf_email__" data-cfemail="bfcbd7cad1dbdacdcfd3ded6d1ccffcbdadcd7d3ded7d0d2de91d0cdd8">[email&#160;protected]</span></a></p></div>
+    <div class="faq-item"><h3 class="faq-q">How do I become a sponsor?</h3><p class="faq-a">For sponsorship questions, sales, and to request a custom sponsorship package: Email us at <a href="#" data-email-b64="dGh1bmRlcnBsYWluc0B0ZWNobGFob21hLm9yZw==" data-mail-query="subject=ThunderPlains%20Sponsorship" data-show-address>[email&#160;protected]</a></p></div>
   </div>
 </section>
 
@@ -825,7 +825,23 @@
 <!-- BACK TO TOP -->
 <a href="#main" class="back-to-top" id="back-to-top" aria-label="Back to top">↑</a>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  (function () {
+    document.querySelectorAll('a[data-email-b64]').forEach(function (a) {
+      var b64 = a.getAttribute('data-email-b64');
+      if (!b64) return;
+      try {
+        var email = atob(b64);
+        var q = a.getAttribute('data-mail-query');
+        a.href = 'mailto:' + email + (q ? '?' + q : '');
+        if (a.hasAttribute('data-show-address')) {
+          a.textContent = email;
+          a.setAttribute('aria-label', 'Email ' + email);
+        }
+      } catch (e) { /* invalid base64 */ }
+    });
+  })();
+
   // ============================================================
   // SESSIONIZE INTEGRATION
   // Replace YOUR_EVENT_ID with the actual Sessionize event ID
@@ -1002,4 +1018,9 @@
     card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open('https://sessionize.com/thunderplains-2026/', '_blank'); }});
   });
 
+  loadSessionizeSpeakers();
+  loadSessionizeSchedule();
+</script>
+</body>
+</html>
  
